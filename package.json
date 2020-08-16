@@ -1,42 +1,27 @@
 {
   "name": "mern-stack-template",
-  "version": "0.1.0",
-  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/start.js",
+  "scripts": {
+    "start:production": "node server/config/env.js production && nodemon server/start.js",
+    "start:staging": "node server/config/env.js staging && nodemon server/start.js",
+    "start:development": "node server/config/env.js development && nodemon server/start.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/iasjem/mern-stack-template.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/iasjem/mern-stack-template/issues"
+  },
+  "homepage": "https://github.com/iasjem/mern-stack-template#readme",
   "dependencies": {
-    "@testing-library/jest-dom": "^4.2.4",
-    "@testing-library/react": "^9.3.2",
-    "@testing-library/user-event": "^7.1.2",
     "cors": "^2.8.5",
     "express": "^4.17.1",
-    "node-sass": "^4.14.1",
-    "nodemon": "^2.0.4",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "3.4.3"
-  },
-  "scripts": {
-    "start:production": "node config/env.js production && nodemon start.js",
-    "start:staging": "node config/env.js staging && nodemon start.js",
-    "start:development": "node config/env.js development && nodemon start.js",
-    "react-start": "react-scripts start",
-    "react-build": "react-scripts build",
-    "react-test": "react-scripts test",
-    "react-eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "mongoose": "^5.10.0",
+    "nodemon": "^2.0.4"
   }
 }
